@@ -158,16 +158,16 @@ En esta sección podés ver los detalles específicos de funcionamiento del cód
 
 ### Agregar un dispositivo
 
-![architecture](doc/inicio.png)
+![architecture](doc/inicio.PNG)
 
 Para agregar un nuevo dispositivo de hace clic en el boton de color verde en la parte superior de la pantalla:
 
 
-![architecture](doc/btnAgregar.png)
+![architecture](doc/btnAgregar.PNG)
 
 Se desplegara un modal donde pedira el información se los datos correspondiente al dispositivo
 
-![architecture](doc/modalAgregar.png)
+![architecture](doc/modalAgregar.PNG)
 
 Se debe completar el formulario y apretar el boton de Guardar, automaticamente se cerrara el modal y se reflejara el nuevo dispositivo en el listado
 
