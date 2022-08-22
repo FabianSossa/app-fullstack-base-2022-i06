@@ -158,7 +158,18 @@ En esta sección podés ver los detalles específicos de funcionamiento del cód
 
 ### Agregar un dispositivo
 
-Completá los pasos para agregar un dispositivo desde el cliente web.
+![architecture](doc/inicio.png)
+
+Para agregar un nuevo dispositivo de hace clic en el boton de color verde en la parte superior de la pantalla:
+
+
+![architecture](doc/btnAgregar.png)
+
+Se desplegara un modal donde pedira el información se los datos correspondiente al dispositivo
+
+![architecture](doc/modalAgregar.png)
+
+Se debe completar el formulario y apretar el boton de Guardar, automaticamente se cerrara el modal y se reflejara el nuevo dispositivo en el listado
 
 ### Frontend
 
