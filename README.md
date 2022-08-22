@@ -172,8 +172,16 @@ Se desplegara un modal donde pedira el información se los datos correspondiente
 Se debe completar el formulario y apretar el boton de Guardar, automaticamente se cerrara el modal y se reflejara el nuevo dispositivo en el listado
 
 ### Frontend
+El frontend desarrollado esta compuesto por los siguientes archivos en TypeScript:
+* device.ts (clase Device con los campos definidos en la base de datos)
+* framework.ts (Ejecutar request)
+* ResponseLister.ts (Declaracion de los handlerResponse de la clase framework)
+* main.ts (Contiene la implementación con las solicitudes de informacion e interacciones)
 
-Completá todos los detalles sobre cómo armaste el frontend, sus interacciones, etc.
+Se tiene las siguientes interacciones entre el frontend y el backend:
+
+![architecture](doc/Frontend.png)
+
 
 ### Backend
 
