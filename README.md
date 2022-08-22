@@ -185,13 +185,10 @@ Se tiene las siguientes interacciones entre el frontend y el backend:
 
 ### Backend
 
-Completá todos los detalles de funcionamiento sobre el backend, sus interacciones con el cliente web, la base de datos, etc.
-
 <details><summary><b>Ver los endpoints disponibles</b></summary><br>
 
-Completá todos los endpoints del backend con los metodos disponibles, los headers y body que recibe, lo que devuelve, ejemplos, etc.
 
-1) Devolver el estado de los dispositivos.
+1) Devolver el listado de los dispositivos.
 
 ```json
 {
@@ -202,14 +199,144 @@ Completá todos los endpoints del backend con los metodos disponibles, los heade
     "request_body": {
         "devices": [
             {
-                "id": 1,
-                "status": true,
-                "description": "Kitchen light"
+                "id": "Identificador del dispositivo",
+                "name": "Nombre del dispositivo",
+                "description": "Descripción del dispositivo",
+                "State": "Estado del dispositivo 0 => apagado, 1 => prendido",
+                "type" : "Tipo dispositivo 1 => Lampara, 2 => Ventana, 3 => Otro"
             }
         ]
     },
 }
 ``` 
+
+2) Devolver valores de un dispositivo.
+
+```json
+{
+    "method": "post",
+    "request_headers": "application/json",
+    "request_body": "{idDevice: \"Identificado del dispositivo\"}",
+    "response_code": 200,
+    "request_body": {
+        "device": [
+            {
+                "id": "Identificador del dispositivo",
+                "name": "Nombre del dispositivo",
+                "description": "Descripción del dispositivo",
+                "State": "Estado del dispositivo 0 => apagado, 1 => prendido",
+                "type" : "Tipo dispositivo 1 => Lampara, 2 => Ventana, 3 => Otro"
+            }
+        ]
+    },
+}
+```
+
+3) Actualizar valores de un dispositivo.
+
+```json
+{
+    "method": "post",
+    "request_headers": "application/json",
+    "request_body": {
+        "datos": [
+            {
+                "id": "Identificador del dispositivo",
+                "name": "Nombre del dispositivo",
+                "description": "Descripción del dispositivo",
+                "State": "Estado del dispositivo 0 => apagado, 1 => prendido",
+                "type" : "Tipo dispositivo 1 => Lampara, 2 => Ventana, 3 => Otro"
+            }
+        ]
+    },
+    "response_code": 200,
+    "request_body": {
+        "datos transaccion": [
+            {
+                ....
+                "tipo" : "update_ok"
+            }
+        ]
+    },
+}
+```
+4) Agregar un nuevo dispositivo.
+
+```json
+{
+    "method": "post",
+    "request_headers": "application/json",
+    "request_body": {
+        "datos": [
+            {
+                "name": "Nombre del dispositivo",
+                "description": "Descripción del dispositivo",
+                "State": "Estado del dispositivo 0 => apagado, 1 => prendido",
+                "type" : "Tipo dispositivo 1 => Lampara, 2 => Ventana, 3 => Otro"
+            }
+        ]
+    },
+    "response_code": 200,
+    "request_body": {
+        "datos transaccion": [
+            {
+                ....
+                "tipo" : "add_ok"
+            }
+        ]
+    },
+}
+```
+5) Actualizar el estado de un dispositivo.
+
+```json
+{
+    "method": "post",
+    "request_headers": "application/json",
+    "request_body": {
+        "datos": [
+            {
+                "id": "Identificador del dispositivo",
+                "State": "Estado del dispositivo 0 => apagado, 1 => prendido",
+            }
+        ]
+    },
+    "response_code": 200,
+    "request_body": {
+        "datos transaccion": [
+            {
+                ....
+                "tipo" : ""
+            }
+        ]
+    },
+}
+```
+
+6) Eliminar un dispositivo.
+
+```json
+{
+    "method": "post",
+    "request_headers": "application/json",
+    "request_body": {
+        "datos": [
+            {
+                "id": "Identificador del dispositivo",
+            }
+        ]
+    },
+    "response_code": 200,
+    "request_body": {
+        "datos transaccion": [
+            {
+                ....
+                "tipo" : "delete_ok"
+            }
+        ]
+    },
+}
+```
 
 </details>
 

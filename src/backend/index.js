@@ -27,7 +27,7 @@ app.get('/devices/', function(req, res) {
         res.send(JSON.stringify(rows)).status(200);
     });
 });
-//==============[Peticion GET => Obtener información de un dispositivo] ============================
+//==============[Peticion POST => Obtener información de un dispositivo] ============================
 app.post('/getDevice/',function(req,res){
     console.log("Get device info");
     utils.query('SELECT id, name, description, state, type, \'getDevice_ok\' tipo from Devices where id = ?', req.body.idDevice, (err,rows) => {
